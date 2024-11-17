@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema para Hotel - Tela Principal</title>
+    <link rel="stylesheet" href="UX.css">
+</head>
+<body>
+
+<header>
+  
+    <div class="logo">Hotel Beija flor</div>
+    <nav>
+        <a href="#home">Cadastros</a>
+        <a href="#reservas">Reservas</a>
+        <a href="#quartos">Quartos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#saida">Sair</a>
+    </nav>
+</header>
+
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form action="sistema_hotel.php" method="POST">
+        <input type="text" name="usuario" class="input-field" placeholder="Usuário" required>
+        <input type="password" name="senha" class="input-field" placeholder="Senha" required>
+        <button type="submit" class="login-btn">Entrar</button>
+    </form>
+
+    <div class="footer">
+        <p>Esqueceu a senha? <a href="#">Clique aqui</a></p>
+        <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
+    </div>
+</div>
+
+</body>
+</html>
