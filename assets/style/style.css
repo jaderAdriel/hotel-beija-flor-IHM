@@ -63,10 +63,6 @@ html, body, #main-wrapper {
         align-items: center;
     }
 
-    .menu {
-        /* display: block; */
-    }
-
     .info {
         display: flex;
         flex-direction: column;
