@@ -19,3 +19,5 @@ const showNavBar = () => {
     const navbar = document.getElementById('main-aside');
     navbar.style.display = "block";
 }
+
+
