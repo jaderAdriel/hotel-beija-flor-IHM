@@ -54,7 +54,7 @@
                             <li class="item">
                                 <a href="#">
                                     <img src="assets/images/menu-icons/booking.svg" alt="Ícone de reservas" class="icon">
-                                    <h2 class="text">Reservas</h2>
+                                    <h2 class="text">Reservas</h2> 
                                 </a>
                             </li>
                             <li class="item">
@@ -77,24 +77,147 @@
         <main>
 		    <div class="main-content">
 		        <div class="booking">
-    	    	 	<span><h1>Reservas</h1></span>
+    	    	 	<span class="reserva"><h1>Reservas</h1></span>
 		        </div>
 				<div class="create">
-			        <a onclick="location.href= '';" class="button-create">
-				        <span>Criar</span>
-			        </a>
+			        <button type="button" class="button-create">
+				        Criar
+			        </button>
 			    </div>
 			</div>
 		<section class="lista">
-		    <img src="assets/images/tool.svg" class="tool">
-			<div class="search-bar">
-			    <form action="/buscar" method="get">
-                    <input type="text" name="q" placeholder="Pesquisar" required>
-                    <button type="submit">Buscar</button>
-       			</form>
-			</div>	
+		    <div class="first-line">
+			    <img src="assets/images/tool.svg" class="tool">
+			    <div class="search-container">
+                    <button type="submit" class="button-search"><img src="assets/images/search.png"></button>
+		    		<input type="text" name="q" placeholder="Pesquisar Cliente" class="search-input" required>
+			    </div>
+            </div>
+			<div class="filters">
+                <div class="date-field">
+                    <label for="checkin"><p class = "text-check">Data de Check-in:</p></label>
+                    <input type="date" id="check-in" class="date-input" >
+                </div>
+                <div class="date-field">
+                    <label for="checkout"><p class = "text-check">Data de Check-out:</p></label>
+                    <input type="date" id="check-out" class="date-input">
+                </div>
+            </div>
+			<div class="container-table">
+			    <table>
+				    <tr>
+					    <th><p>Hóspede</p></th>
+						<th><p>Check-in</p></th>
+						<th><p>Check-out</p></th>
+						<th><p>Número do Quarto</p></th>
+						<th><p>Ativo</p></th>
+						<th><p>Ações</p></th>
+					</tr>
+					<tr>
+					    <td></td>
+					</tr>
+				</table>
+			</div>
 		</section>
 		</main>
     </div>
+    <div id="modal" class="modal">
+		    <div class="modal-content">
+			    <div class="modal-header">
+			    <div class= "booking-title">
+				    <img src="assets/images/menu-icons/booking.svg">
+				    <h1>Reservas</h1>
+			    </div>
+			    <div class="close-button">
+			        <span id="close-modal">&times;</span>
+			    </div>
+			</div>
+			<br>
+			<div class="modal-search">
+			    <div class="modal-search-bar">
+					<h3>Cliente: </h3>
+					<div class="borded-bar">
+                    <button type="submit" class="button-search"><img src="assets/images/search.png"></button>
+		    		<input type="text" name="q" placeholder="Pesquisar Cliente" class="search-input" required>
+			    </div>
+				</div>
+				<div class="modal-date">
+                <div class="date-field">
+                    <label for="checkin"><p class = "text-check">Data de Check-in:</p></label>
+                    <input type="date" id="check-in" class="date-input" >
+                </div>
+                <div class="date-field">
+                    <label for="checkout"><p class = "text-check">Data de Check-out:</p></label>
+                    <input type="date" id="check-out" class="date-input">
+                </div>
+            </div>
+			</div>
+			<br>
+			<form class="booking-form">
+				<h2>Custo</h2><br>
+			    <div class="booking-group" id="cost">
+				    <div class="modal-form-column">
+				        <div class="form-input">    
+							<h3>Taxa</h3>
+					        <input class="booking-info" id="#surcharge">
+			    	    </div>
+						<div class="form-input">    
+							<h3>Desconto</h3>
+					        <input class="booking-info" id="#discount">
+					    </div>
+						<div class="form-input">
+    						<h3>Total</h3>
+			    		    <input class="booking-info" id="#total">
+						</div>	
+					</div>	
+					<div class="modal-form-column">	
+					    <div class="form-input">
+    			    		<h3>Diária</h3>
+			    	    	<input class="booking-info" id="#daily">
+						</div>
+						<div class="form-input">	
+    				        <h3>Subtotal</h3>
+	    			    	<input class="booking-info" id="#subtotal">				
+			            </div>
+				   </div>
+				</div>	
+				<h2>Forma de Pagamento</h2><br>
+				<div class="booking-group" id="payment">
+				    <div class="modal-form-column">
+				        <div class="form-input">    
+							<h3>Dinheiro</h3>
+					        <input class="booking-info" id="#surcharge">
+			    	    </div>
+						<div class="form-input">    
+							<h3>Pix</h3>
+					        <input class="booking-info" id="#discount">
+					    </div>
+						<div class="form-input">
+    						<h3>Crédito</h3>
+			    		    <input class="booking-info" id="#total">
+						</div>	
+					</div>	
+					<div class="modal-form-column">	
+					    <div class="form-input">
+    			    		<h3>Débito</h3>
+			    	    	<input class="booking-info" id="#daily">
+						</div>
+						<div class="form-input">	
+    				        <h3>Cheque</h3>
+	    			    	<input class="booking-info" id="#subtotal">				
+			            </div>
+				   </div>
+				</div>
+			</form>
+			<div class="modal-footer">
+			    <button type="button" id="booking-cancel">
+				    <b>Cancelar</b>
+				</button>
+                <button type="button" id="booking-confirm">
+				    <b>Confirmar</b>
+				</button>				
+			</div>
+		</div>
+	</div>
 </body>
 </html>
