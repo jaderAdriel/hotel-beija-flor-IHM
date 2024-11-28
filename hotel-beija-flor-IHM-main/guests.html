@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guests</title>
+    <link rel="stylesheet" href="assets/style/style.css">
+    <script src="assets/scripts/responsive.js" defer></script>
+    <link rel="stylesheet" href="assets/style/guests.css">
+</head>
+<body>
+    <div id="main-wrapper">
+        <div class="top" id="top">
+            <div>
+                <div class="menu" id="menu">
+                    <img class="min-icon menu" src="assets/images/menu-icons/menu.svg" alt="menu icon">
+                </div>
+            </div>
+
+            <div id="user-data">
+                <div class="info">
+                    <span class="role">Admin</span>
+                    <span class="name">Nome</span>
+                </div>
+                <img class="min-icon" src="assets/images/user.svg" alt="user's name">
+            </div>
+            
+        </div>
+        <aside id="main-aside">
+            <div class="wrapper">
+                <div class="aside-top">
+                    <header>
+                        <img src="assets/images/logo.svg" alt="Beija-flor dourado, logo do hotel">
+                        <h1>Hotel Beija-flor</h1>
+                    </header>
+                    <nav class="page-navigation" aria-label="Menu principal">
+                        <ul class="list">
+                            <li class="item">
+                                <a href="#">
+                                    <img src="assets/images/menu-icons/users.svg" alt="Ícone de usuários" class="icon">
+                                    <h2 class="text">Usuários</h2>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#">
+                                    <img src="assets/images/menu-icons/rooms.svg" alt="Ícone de quartos" class="icon">
+                                    <h2 class="text">Quartos</h2>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#">
+                                    <img src="assets/images/menu-icons/guests.svg" alt="Ícone de hóspedes" class="icon">
+                                    <h2 class="text">Hóspedes</h2>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#">
+                                    <img src="assets/images/menu-icons/booking.svg" alt="Ícone de reservas" class="icon">
+                                    <h2 class="text">Reservas</h2>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#">
+                                    <img src="assets/images/menu-icons/settings.svg" alt="Ícone de configurações" class="icon">
+                                    <h2 class="text">Configurações</h2>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            
+                <footer class="aside-bottom">
+                    <img class="min-icon" src="/assets/images/menu-icons/leave.svg" alt="">
+                    <span>Sair</span>
+                </footer>
+            </div>
+        </aside>
+        
+        <main>
+            <header>
+                <h1 id="page-title">Guests</h1>
+            </header>
+        
+            <section class="container">
+                <div class="actions">
+                    <form class="search" aria-label="Search guests">
+                        <label for="searchRoom">
+                            <img src="assets/images/icons/search.svg" alt="Search icon">
+                        </label>
+                        <input type="search" name="search" id="searchRoom" placeholder="Search..." aria-placeholder="Search guests">
+                    </form>
+                </div>
+        
+                <ul id="roomGuest-list" aria-label="Guest list">
+                    
+                    <li class="roomGuest-item">
+                        <article>
+                            <header>
+                                <div class="status-wrapper occupied" aria-label="Room status: occupied">
+                                    <img src="assets/images/icons/door.svg" alt="Door icon">
+                                    <span class="status">Occupied</span>
+                                </div>
+                                <button class="menu-button" aria-label="Options menu">
+                                    <img src="assets/images/icons/overflow-menu-vertical.svg" alt="Options menu icon">
+                                </button>
+                            </header>
+                            <section class="room-description">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </section>
+                            <div class="roomNumber-wrapper">
+                                <div class="room-number occupied" aria-label="Room number">01</div>
+                                <span>Room number</span>
+                            </div>
+                            <footer class="actions">
+                                <div class="action occupied">
+                                    <a href="#" class="" aria-label="Check out from room 01">Saída</a>
+                                </div>
+                                <button class="see-more action" aria-label="See more details about room 01">
+                                    <span>See more</span>
+                                </button>
+                            </footer>
+                        </article>
+                    </li>
+
+                    <li class="roomGuest-item">
+                        <article>
+                            <header>
+                                <div class="status-wrapper available" aria-label="Room status: available">
+                                    <img src="assets/images/icons/door.svg" alt="Door icon">
+                                    <span class="status">Available</span>
+                                </div>
+                                <button class="menu-button" aria-label="Options menu">
+                                    <img src="assets/images/icons/overflow-menu-vertical.svg" alt="Options menu icon">
+                                </button>
+                            </header>
+                            <section class="room-description">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </section>
+                            <div class="roomNumber-wrapper">
+                                <div class="room-number available" aria-label="Room number">02</div>
+                                <span>Room number</span>
+                            </div>
+                            <footer class="actions">
+                                <div class="action available">
+                                    <a href="#" class="" aria-label="Check out from room 01">Entrada</a>
+                                </div>
+                                <button class="see-more action" aria-label="See more details about room 01">
+                                    <span>See more</span>
+                                </button>
+                            </footer>
+                        </article>
+                    </li>
+
+                    <li class="roomGuest-item">
+                        <article>
+                            <header>
+                                <div class="status-wrapper occupied" aria-label="Room status: occupied">
+                                    <img src="assets/images/icons/door.svg" alt="Door icon">
+                                    <span class="status">Occupied</span>
+                                </div>
+                                <button class="menu-button" aria-label="Options menu">
+                                    <img src="assets/images/icons/overflow-menu-vertical.svg" alt="Options menu icon">
+                                </button>
+                            </header>
+                            <section class="room-description">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </section>
+                            <div class="roomNumber-wrapper">
+                                <div class="room-number occupied" aria-label="Room number">03</div>
+                                <span>Room number</span>
+                            </div>
+                            <footer class="actions">
+                                <div class="action occupied">
+                                    <a href="#" class="" aria-label="Check out from room 01">Saída</a>
+                                </div>
+                                <button class="see-more action" aria-label="See more details about room 01">
+                                    <span>See more</span>
+                                </button>
+                            </footer>
+                        </article>
+                    </li>
+
+                    <li class="roomGuest-item">
+                        <article>
+                            <header>
+                                <div class="status-wrapper occupied" aria-label="Room status: occupied">
+                                    <img src="assets/images/icons/door.svg" alt="Door icon">
+                                    <span class="status">Occupied</span>
+                                </div>
+                                <button class="menu-button" aria-label="Options menu">
+                                    <img src="assets/images/icons/overflow-menu-vertical.svg" alt="Options menu icon">
+                                </button>
+                            </header>
+                            <section class="room-description">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </section>
+                            <div class="roomNumber-wrapper">
+                                <div class="room-number occupied" aria-label="Room number">04</div>
+                                <span>Room number</span>
+                            </div>
+                            <footer class="actions">
+                                <div class="action occupied">
+                                    <a href="#" class="" aria-label="Check out from room 01">Saída</a>
+                                </div>
+                                <button class="see-more action" aria-label="See more details about room 01">
+                                    <span>See more</span>
+                                </button>
+                            </footer>
+                        </article>
+                    </li>
+
+
+                    <li class="roomGuest-item">
+                        <article>
+                            <header>
+                                <div class="status-wrapper occupied" aria-label="Room status: occupied">
+                                    <img src="assets/images/icons/door.svg" alt="Door icon">
+                                    <span class="status">Occupied</span>
+                                </div>
+                                <button class="menu-button" aria-label="Options menu">
+                                    <img src="assets/images/icons/overflow-menu-vertical.svg" alt="Options menu icon">
+                                </button>
+                            </header>
+                            <section class="room-description">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </section>
+                            <div class="roomNumber-wrapper">
+                                <div class="room-number occupied" aria-label="Room number">05</div>
+                                <span>Room number</span>
+                            </div>
+                            <footer class="actions">
+                                <div class="action occupied">
+                                    <a href="#" class="" aria-label="Check out from room 01">Saída</a>
+                                </div>
+                                <button class="see-more action" aria-label="See more details about room 01">
+                                    <span>See more</span>
+                                </button>
+                            </footer>
+                        </article>
+                    </li>
+
+                    <li class="roomGuest-item">
+                        <article>
+                            <header>
+                                <div class="status-wrapper occupied" aria-label="Room status: occupied">
+                                    <img src="assets/images/icons/door.svg" alt="Door icon">
+                                    <span class="status">Occupied</span>
+                                </div>
+                                <button class="menu-button" aria-label="Options menu">
+                                    <img src="assets/images/icons/overflow-menu-vertical.svg" alt="Options menu icon">
+                                </button>
+                            </header>
+                            <section class="room-description">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </section>
+                            <div class="roomNumber-wrapper">
+                                <div class="room-number occupied" aria-label="Room number">06</div>
+                                <span>Room number</span>
+                            </div>
+                            <footer class="actions">
+                                <div class="action occupied">
+                                    <a href="#" class="" aria-label="Check out from room 01">Saída</a>
+                                </div>
+                                <button class="see-more action" aria-label="See more details about room 01">
+                                    <span>See more</span>
+                                </button>
+                            </footer>
+                        </article>
+                    </li>
+
+                </ul>                
+            </section>
+        </main>
+        <div id="modal-wrapper">
+            <section id="checkout-modal" class="modal">
+                <header class="modal-header">
+                    <div class="header-content">
+                        <div class="modal-icon">
+                            <img src="assets/images/icons/door-open.svg" alt="Ícone de porta aberta">
+                        </div>
+                        <h2 class="modal-title">Finalizar Hospedagem</h2>
+                    </div>
+                    <div class="close-icon">
+                        <img src="assets/images/icons/close.svg" alt="Ícone de fechar">
+                    </div>
+                </header>
+                <div class="modal-content">
+                    <form action="." method="get">
+                        <!-- Informações do Hóspede -->
+                        <div class="form-group">
+                            <label for="guest-name">Hóspede</label>
+                            <input type="text" id="guest-name" name="guest-name" placeholder="Nome do hóspede">
+                        </div>
+            
+                        <!-- Datas de Check-in e Check-out -->
+                        <fieldset class="date-fields">
+                            <div class="form-group">
+                                <label for="check-in-date">Entrada</label>
+                                <input type="date" id="check-in-date" name="check-in-date">
+                            </div>
+                            <div class="form-group">
+                                <label for="check-out-date">Saída</label>
+                                <input type="date" id="check-out-date" name="check-out-date">
+                            </div>
+                        </fieldset>
+            
+                        <!-- Detalhes de Custos -->
+                        <fieldset class="cost-details">
+                            <legend>Custo</legend>
+                            <div class="fieldset-body columns">
+                                <div class="column">
+                                    <div class="form-group">
+                                        <label for="discount">Desconto</label>
+                                        <input type="number" id="discount" name="discount" min="0.00" max="10000.00" step="0.01" placeholder="R$ 0,00">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="surcharge">Acréscimo</label>
+                                        <input type="number" id="surcharge" name="surcharge" min="0.00" max="10000.00" step="0.01" placeholder="R$ 0,00">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="total-cost">Total</label>
+                                        <input type="number" id="total-cost" name="total-cost" min="0.00" max="10000.00" step="0.01" placeholder="R$ 0,00">
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="form-group">
+                                        <label for="daily-rate">Valor diária</label>
+                                        <input type="number" id="daily-rate" name="daily-rate" min="0.00" max="10000.00" step="0.01" placeholder="R$ 0,00">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="subtotal">Subtotal</label>
+                                        <input type="number" id="subtotal" name="subtotal" min="0.00" max="10000.00" step="0.01" placeholder="R$ 0,00">
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+            
+                        <!-- Detalhes de Pagamento -->
+                        <fieldset class="payment-details">
+                            <legend>Pagamento</legend>
+                            <div class="fieldset-body columns">
+                                <div class="column">
+                                    <div class="form-group">
+                                        <label for="payment-discount">Desconto</label>
+                                        <input type="number" id="payment-discount" name="payment-discount" min="0.00" max="10000.00" step="0.01" placeholder="R$ 0,00">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="payment-surcharge">Acréscimo</label>
+                                        <input type="number" id="payment-surcharge" name="payment-surcharge" min="0.00" max="10000.00" step="0.01" placeholder="R$ 0,00">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="payment-total">Total</label>
+                                        <input type="number" id="payment-total" name="payment-total" min="0.00" max="10000.00" step="0.01" placeholder="R$ 0,00">
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="form-group">
+                                        <label for="payment-daily-rate">Valor diária</label>
+                                        <input type="number" id="payment-daily-rate" name="payment-daily-rate" min="0.00" max="10000.00" step="0.01" placeholder="R$ 0,00">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="payment-subtotal">Subtotal</label>
+                                        <input type="number" id="payment-subtotal" name="payment-subtotal" min="0.00" max="10000.00" step="0.01" placeholder="R$ 0,00">
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="actions">
+                            <div class="action cancel-action">
+                                <button data-modal-target="checkout-modal" class="cancel-btn">Cancelar</button>
+                            </div>
+                            <div class="action submit-action">
+                                <button class="confirm-btn btn">Confirmar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+
+    
+</body>
+</html>

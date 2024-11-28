@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Hotel Beija-Flor</title>
+    <style>
+
+        body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(to right, #ffffff 70%, #000042 30%);
+            font-family: Arial, sans-serif;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        #cadastro {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 120%;
+        }
+
+        .linha-formulario {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .endereco {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .endereco2 {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .contato {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .senha {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .cadastro-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 60%;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px #000042(0, 0, 0, 0.1);
+        }
+
+        .cadastro-container .form {
+            width: 60%;
+        }
+
+        .cadastro-container .form h1 {
+            text-align: center;
+            font-size: 28px;
+            color: #000042;
+        }
+
+        .cadastro-container .form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .cadastro-container .form select {
+            width: 90%; /* estado */
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .cadastro-container .form button {
+            width: 100%; /* cadastrar */
+            padding: 10px;
+            background-color: #000042;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cadastro-container .form .remember-me {
+            margin-top: 10px;
+        }
+
+        .cadastro-container .image-container {
+            width: 300px; /* tamanho ajustado */
+            height: 400px; /* altura ajustada */
+            display: flex;
+            justify-self: flex-end;
+            overflow: hidden; /* para ocultar partes da imagem que ultrapassarem o container */
+        }
+
+        .cadastro-container .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* faz a imagem preencher o container sem distorcer */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .cadastro-container .form label {
+            font-size: 14px;
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cadastro" class="section active">
+        <div class="cadastro-container">
+            <div class="form">
+                <h1>Hotel Beija Flor</h1>
+                <img src="imagens/beijaflor.png" alt="beijaflor" class="profile-image">
+                <h2>Cadastre-se</h2>
+
+                <p>Dados Pessoais</p>
+
+                <div class="linha-formulario">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required><br>
+
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" required><br>
+                </div>
+
+                <form>
+                    <p>Endereço</p>
+                    <div class="endereco">
+                        <label for="estado">Estado:</label>
+                        <select id="estado" name="estado" required>
+                            <option value="">Escolha seu Estado</option>
+                            <option value="BA">Bahia</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PR">Paraná</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="PE">Pernambuco</option>
+                        </select><br>
+
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" id="cidade" name="cidade" required><br>
+
+                        <label for="cep">CEP:</label>
+                        <input type="text" id="cep" name="cep" required><br>
+                    </div>
+
+                    <div class="endereco2">
+                        <label for="rua">Rua:</label>
+                        <input type="text" id="rua" name="rua" required><br>
+    
+                        <label for="numero">Número:</label>
+                        <input type="number" id="numero" name="numero" required><br>
+                    </div>
+
+                    <p>Dados de Cadastro</p>
+                    <div class="contato">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required><br>
+    
+                        <label for="telefone">Telefone Principal:</label>
+                        <input type="tel" id="telefone" name="telefone" required><br>
+                    </div>
+
+                    <div class="senha">
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" name="senha" required><br>
+
+                        <label for="senha">Confirme sua senha:</label>
+                        <input type="password" id="senha" name="senha" required><br>
+                    </div>
+
+                    <div class="add-photo-button">
+                        <p>Adicione sua foto</p>
+                        <label for="photo-upload">
+                            <img src="imagens/adicionar.jpg" alt="adicionar" class="profile-image">
+                        </label>
+                        <input type="file" id="photo-upload" accept="image/*">
+                    </div>
+
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+            <div class="image-container">
+                <img src="imagens/foto login.png" alt="Hotel Beija-Flor">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(function(section) {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
