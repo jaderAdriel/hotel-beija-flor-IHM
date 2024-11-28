@@ -21,7 +21,6 @@ a {
 
 html, body, #main-wrapper {
     width: 100%;
-    height: fit-content;
     min-height: 100vh;
 }
 
@@ -156,15 +155,6 @@ img.min-icon {
 main {
     grid-area: c;
     background-color: #F1F1F1;
-    overflow-y: auto; /* Habilita o scroll vertical */
-    height: 200vh;
+    overflow-y: auto;
     overflow: hidden;
-    max-height: 100%; 
 }
-
-
-/* @media screen and (min-width: 1100px) {
-    .menu {
-        display: none;
-    }
-} */
