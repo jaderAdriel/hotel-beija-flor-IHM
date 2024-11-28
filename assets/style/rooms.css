@@ -1,22 +1,26 @@
-.header {
+main {
+    background-color: #F9F9F9;
+}
+.users-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+.users-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #ccc;
-    h1 {
-        font-size: 1.5rem;
-        color: #000042;
-    }
+    margin-bottom: 20px;
 }
-.create-button {
-    background-color: #000042;
-    color: #fff;
-    padding: 4px 40px;
+.create-btn {
+    background-color: #000066;
+    padding: 10px 20px;
     border: none;
-    border-radius: 8px;
-    font-size: 1rem;
+    border-radius: 4px;
     cursor: pointer;
+}
+.create-btn a {
+    color: #ffffff;
 }
 .search-container {
     margin: 10px 0px;
