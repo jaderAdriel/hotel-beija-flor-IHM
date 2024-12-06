@@ -42,7 +42,7 @@
         .endereco {
             display: flex;
             justify-content: space-between;
-            width: 100%;
+            width: 110%;
         }
 
         .endereco2 {
@@ -67,14 +67,10 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 60%;
+            width: 80%;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 6px #000042(0, 0, 0, 0.1);
-        }
-
-        .cadastro-container .form {
-            width: 60%;
         }
 
         .cadastro-container .form h1 {
@@ -115,8 +111,8 @@
         }
 
         .cadastro-container .image-container {
-            width: 300px; /* tamanho ajustado */
-            height: 400px; /* altura ajustada */
+            width: 500px; /* tamanho ajustado */
+            height: 500px; /* altura ajustada */
             display: flex;
             justify-self: flex-end;
             overflow: hidden; /* para ocultar partes da imagem que ultrapassarem o container */
@@ -145,7 +141,7 @@
                 <img src="imagens/beijaflor.png" alt="beijaflor" class="profile-image">
                 <h2>Cadastre-se</h2>
 
-                <p>Dados Pessoais</p>
+                <h3>Dados Pessoais</h3>
 
                 <div class="linha-formulario">
                     <label for="nome">Nome Completo:</label>
@@ -156,7 +152,7 @@
                 </div>
 
                 <form>
-                    <p>Endereço</p>
+                    <h3>Endereço</h3>
                     <div class="endereco">
                         <label for="estado">Estado:</label>
                         <select id="estado" name="estado" required>
@@ -185,7 +181,7 @@
                         <input type="number" id="numero" name="numero" required><br>
                     </div>
 
-                    <p>Dados de Cadastro</p>
+                    <h3>Dados de Cadastro</h3>
                     <div class="contato">
                         <label for="email">E-mail:</label>
                         <input type="email" id="email" name="email" required><br>
