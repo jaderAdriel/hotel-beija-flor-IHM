@@ -177,4 +177,7 @@ body {
   .confirm-btn:hover {
     background-color: #2458b2;
   }
-  
+  .link-style {
+    text-decoration: none;
+    color: inherit; /* Opcional: herda a cor do elemento pai */
+}
