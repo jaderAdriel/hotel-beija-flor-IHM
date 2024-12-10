@@ -21,3 +21,26 @@ const showNavBar = () => {
 }
 
 
+
+const modal = document.getElementById("modal-wrapper");
+modal.style.display = "none";
+
+const showModalButtons = document.querySelectorAll(".roomGuest-item .action.available");
+
+
+showModalButtons.forEach((element) => {
+    element.addEventListener('click', () => {
+        modal.style.display = "flex";
+    });
+})
+
+const cancelModalButtons= document.querySelectorAll("#modal-wrapper .close-icon");
+
+
+cancelModalButtons.forEach((element) => {
+    element.addEventListener('click', () => {
+        modal.style.display = "none";
+    });
+})
+
+
