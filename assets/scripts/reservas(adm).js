@@ -128,26 +128,23 @@ elements.forEach(element => {
 
                 let exibir = true;
 
-                // Filtro por nome
+            
                 if (inputNome && !nome.includes(inputNome)) {
-                    exibir = false;  // Se o nome não contiver o texto do filtro, oculta a linha
+                    exibir = false;  
                 }
 
-                // Filtro por check-in
                 if (checkinDate && checkin < checkinDate) {
-                    exibir = false;  // Se a data de check-in for antes do filtro, oculta a linha
+                    exibir = false; 
                 }
 
-                // Filtro por check-out
                 if (checkoutDate && checkout > checkoutDate) {
-                    exibir = false;  // Se a data de check-out for depois do filtro, oculta a linha
+                    exibir = false;  
                 }
 
-                // Exibe ou oculta a linha dependendo dos filtros
                 if (exibir) {
-                    linhas[i].style.display = "";  // Exibe a linha
+                    linhas[i].style.display = "";  
                 } else {
-                    linhas[i].style.display = "none";  // Oculta a linha
+                    linhas[i].style.display = "none";  
                 }
             }
         }
