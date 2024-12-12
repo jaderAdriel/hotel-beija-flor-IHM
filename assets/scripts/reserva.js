@@ -12,18 +12,18 @@
                 const checkinDate = new Date(campoCheckin.value);
                 const checkoutDate = new Date(campoCheckout.value);
                 const timeDifference = checkoutDate - checkinDate;
-                const days = timeDifference / (1000 * 3600 * 24); // Converte de milissegundos para dias
+                const days = timeDifference / (1000 * 3600 * 24); 
     
                 // Verifica se a data de Check-out é posterior à de Check-in
                 if (days <= 0) {
-                    campoTotal.value = "0,00"; // Exibe 0,00 se a data de Check-out for inválida
-                    campoSubtotal.value = "0,00"; // Exibe 0,00 no Subtotal
+                    campoTotal.value = "0,00"; 
+                    campoSubtotal.value = "0,00"; 
                 } else {
                     // Calculando o valor total
-                    const dailyPrice = parseFloat(campoDailyPrice.value); // Valor da diária
-                    const total = dailyPrice * days; // Calcula o total
-                    campoTotal.value = total.toFixed(2); // Atualiza o campo Total
-                    campoSubtotal.value = total.toFixed(2); // Atualiza o campo Subtotal
+                    const dailyPrice = parseFloat(campoDailyPrice.value);
+                    const total = dailyPrice * days; 
+                    campoTotal.value = total.toFixed(2); 
+                    campoSubtotal.value = total.toFixed(2);
                 }
             }
     
@@ -32,26 +32,26 @@
             campoCheckout.addEventListener("change", calcularTotal);
     
             // Validação ao enviar o formulário
-            const botaoConfirmar = document.querySelector(".confirm"); // Seleciona o botão Confirmar
+            const botaoConfirmar = document.querySelector(".confirm");
     
             botaoConfirmar.addEventListener("click", function (event) {
                 // Verifica se o campo Hóspede está vazio=
                 if (campoHospede.value.trim() === "") {
                     alert("Por favor, preencha o campo 'Hóspede'.");
-                    campoHospede.focus(); // Dá foco ao campo Hóspede
-                    event.preventDefault(); // Impede qualquer ação padrão do botão
+                    campoHospede.focus(); 
+                    event.preventDefault();
                 } 
                 // Verifica se o campo Check-in está vazio
                 else if (campoCheckin.value.trim() === "") {
                     alert("Por favor, selecione a data de Check-in.");
-                    campoCheckin.focus(); // Dá foco ao campo Check-in
-                    event.preventDefault(); // Impede qualquer ação padrão do botão
+                    campoCheckin.focus(); 
+                    event.preventDefault(); 
                 }
                 // Verifica se o campo Check-out está vazio
                 else if (campoCheckout.value.trim() === "") {
                     alert("Por favor, selecione a data de Check-out.");
-                    campoCheckout.focus(); // Dá foco ao campo Check-out
-                    event.preventDefault(); // Impede qualquer ação padrão do botão
+                    campoCheckout.focus(); 
+                    event.preventDefault(); 
                 } 
                 // Se todos os campos forem preenchidos corretamente
                 else {
