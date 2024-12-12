@@ -1,0 +1,171 @@
+.modal {
+    margin: auto;
+    background: #ffffff;
+    height: 680px;
+    width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px 40px;
+    font-size: 14px;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  
+  .modal-header h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+  }
+  
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.3s;
+  }
+  
+  .close-btn:hover {
+    color: #333;
+  }
+  
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #2d6cdf;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  
+  .checkbox-group label {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .radio-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  
+  .radio-group div {
+    flex: 1;
+  }
+  
+  .radio-group p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  
+  .radio-group label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 6px;
+    color: #555;
+  }
+
+  .upload-group {
+    margin-bottom: 25px;
+  }
+  
+  .upload-box {
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    padding: 40px 30px;
+    text-align: center;
+    background: #fafafa;
+    cursor: pointer;
+    transition: background 0.3s, border-color 0.3s;
+  }
+  
+  .upload-box:hover {
+    background: #f0f0f0;
+    border-color: #2d6cdf;
+  }
+  
+  .upload-box p {
+    font-size: 14px;
+    color: #888;
+    margin-top: 10px;
+  }
+  
+  .upload-icon {
+    font-size: 30px;
+    color: #bbb;
+  }
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -10px;
+  }
+  
+  .cancel-btn,
+  .confirm-btn {
+    padding: 12px 30px;
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .cancel-btn {
+    background-color: #f0f0f0;
+    color: #555;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #e5e5e5;
+  }
+  
+  .confirm-btn {
+    background-color: #2d6cdf;
+    color: white;
+  }
+  
+  .confirm-btn:hover {
+    background-color: #2458b2;
+  }
+  .link-style {
+    text-decoration: none;
+    color: inherit; /* Opcional: herda a cor do elemento pai */
+}
