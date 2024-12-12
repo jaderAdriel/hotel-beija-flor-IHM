@@ -46,15 +46,15 @@ h1 {
 
 .cadastro-button {
     background-color: #ffffff;   
-    color: #000042; /* Cor do texto */
+    color: #000042; 
     padding: 10px 20px;
     font-size: 18px;
-    border: 2px solid #000000; /* Borda preta */
+    border: 2px solid #000000; 
     margin-left: 10px;
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
-    box-shadow: none; /* Garante que não haja sombra extra */
+    box-shadow: none; 
 }
 
 
@@ -148,15 +148,12 @@ button:hover {
     text-decoration: none;
 }
 
-
-.suitis .image {
-    display: block; /* Torna a imagem um elemento de bloco */
-    width: 90%;
-    margin: 20px auto; /* Centraliza horizontalmente */
-    max-width: 2500px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+#suitis {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 40vh; 
+    text-align: center;
 }
 
 
