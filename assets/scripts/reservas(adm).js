@@ -98,6 +98,11 @@ elements.forEach(element => {
 		const div = document.querySelector('.modal'); 
 
         const elements = div.querySelectorAll('input, textarea');
+		elements.forEach(element => {
+  if (element.tagName.toLowerCase() === 'input' || element.tagName.toLowerCase() === 'textarea') {
+    element.value = '';
+  }
+});
 	}else{
 		alert('Por favor preencha todos os formulários.');
 	}	
