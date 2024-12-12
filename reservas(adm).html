@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservas</title>
-    <link rel="stylesheet" href="assets/style/style.css">
-    <script src="assets/scripts/responsive.js" defer></script>
+    <link rel="stylesheet" href="assets/style/reservas(adm).css">
+    <script src="assets/scripts/reservas(adm).js" defer></script>
 </head>
 <body>
     <div id="main-wrapper">
@@ -28,10 +28,8 @@
             <div class="wrapper">
                 <div class="aside-top">
                     <header>
-                        <a href="index.html">
-                            <img src="assets/images/logo.svg" alt="Beija-flor dourado, logo do hotel">
-                            <h1>Hotel Beija-flor</h1>
-                        </a>
+                        <img src="assets/images/logo.svg" alt="Beija-flor dourado, logo do hotel">
+                        <h1>Hotel Beija-flor</h1>
                     </header>
                     <nav class="page-navigation" aria-label="Menu principal">
                         <ul class="list">
@@ -82,7 +80,7 @@
     	    	 	<span class="reserva"><h1>Reservas</h1></span>
 		        </div>
 				<div class="create">
-			        <button type="button" class="button-create">
+			        <button type="button" class="button-create" onclick="openModal()">
 				        Criar
 			        </button>
 			    </div>
@@ -92,7 +90,8 @@
 			    <img src="assets/images/tool.svg" class="tool">
 			    <div class="search-container">
                     <button type="submit" class="button-search"><img src="assets/images/search.png"></button>
-		    		<input type="text" name="q" placeholder="Pesquisar Cliente" class="search-input" required>
+		    		<input type="text" name="q" placeholder="Pesquisar Cliente" id="filtro-search" class="search-input" required>
+					
 			    </div>
             </div>
 			<div class="filters">
@@ -106,32 +105,31 @@
                 </div>
             </div>
 			<div class="container-table">
-			    <table>
-				    <tr>
-					    <th><p>Hóspede</p></th>
-						<th><p>Check-in</p></th>
-						<th><p>Check-out</p></th>
-						<th><p>Número do Quarto</p></th>
-						<th><p>Ativo</p></th>
-						<th><p>Ações</p></th>
-					</tr>
-					<tr>
-					    <td></td>
-					</tr>
+			    <table id="table">
+				    <thead>
+		    		    <tr>
+				    	    <th><span>Hóspede</span></th>
+				    		<th><span>Check-in</span></th>
+				    		<th><span>Check-out</span></th>
+				    		<th><span>Número do Quarto</span></th>
+					     	<th><span>Ativo</span></th>
+						    <th><span>Ações</span></th>
+					    </tr>
+					</thead>
 				</table>
 			</div>
 		</section>
 		</main>
     </div>
-    <div id="modal" class="modal">
+    <div id="modal" class="modal" id="modal">
 		    <div class="modal-content">
 			    <div class="modal-header">
 			    <div class= "booking-title">
 				    <img src="assets/images/menu-icons/booking.svg">
 				    <h1>Reservas</h1>
 			    </div>
-			    <div class="close-button">
-			        <span id="close-modal">&times;</span>
+			    <div class="close-button" id="close-button">
+			        <span onclick="closeModal()" id="close-modal">&times;</span>
 			    </div>
 			</div>
 			<br>
@@ -139,18 +137,24 @@
 			    <div class="modal-search-bar">
 					<h3>Cliente: </h3>
 					<div class="borded-bar">
-                    <button type="submit" class="button-search"><img src="assets/images/search.png"></button>
-		    		<input type="text" name="q" placeholder="Pesquisar Cliente" class="search-input" required>
-			    </div>
+                        <button type="submit" class="button-search"><img src="assets/images/search.png"></button>
+		    		    <input type="text" name="q" placeholder="Pesquisar Cliente" class="search-input" id="Nome" required>
+			        </div>
+				</div>
+				<div class="modal-search-bar">
+				<h3>Número do Quarto:</h3>
+				<div class="borded-bar">
+			    	<input type="number" id="room-number" class="search-input" required>
+				</div >
 				</div>
 				<div class="modal-date">
                 <div class="date-field">
-                    <label for="checkin"><p class = "text-check">Data de Check-in:</p></label>
-                    <input type="date" id="check-in" class="date-input" >
+                    <p class = "text-check">Data de Check-in:</p>
+                    <input type="date" id="modal-check-in" class="date-input" >
                 </div>
                 <div class="date-field">
-                    <label for="checkout"><p class = "text-check">Data de Check-out:</p></label>
-                    <input type="date" id="check-out" class="date-input">
+                    <p class = "text-check">Data de Check-out:</p>
+                    <input type="date" id="modal-check-out" class="date-input">
                 </div>
             </div>
 			</div>
@@ -169,17 +173,17 @@
 					    </div>
 						<div class="form-input">
     						<h3>Total</h3>
-			    		    <input class="booking-info" id="#total">
+			    		    <input class="booking-info" id="total" readonly>
 						</div>	
 					</div>	
 					<div class="modal-form-column">	
 					    <div class="form-input">
     			    		<h3>Diária</h3>
-			    	    	<input class="booking-info" id="#daily">
+			    	    	<input class="booking-info" id="daily" readonly>
 						</div>
 						<div class="form-input">	
     				        <h3>Subtotal</h3>
-	    			    	<input class="booking-info" id="#subtotal">				
+	    			    	<input class="booking-info" id="subtotal" readonly>				
 			            </div>
 				   </div>
 				</div>	
@@ -212,10 +216,10 @@
 				</div>
 			</form>
 			<div class="modal-footer">
-			    <button type="button" id="booking-cancel">
+			    <button type="button" id="booking-cancel" onclick="closeModal()">
 				    <b>Cancelar</b>
 				</button>
-                <button type="button" id="booking-confirm">
+                <button type="button" id="booking-confirm" onclick="submit()">
 				    <b>Confirmar</b>
 				</button>				
 			</div>
