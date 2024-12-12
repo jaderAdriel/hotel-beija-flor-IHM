@@ -5,15 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style/inicial.css">
     <title>Hotel Beija-Flor</title>
-    <style>
-        .section {
-            display: none;
-        }
-
-        .section.active {
-            display: block;
-        }
-    </style>
 </head>
 
 <body>
@@ -21,17 +12,15 @@
         <div class="header">
             <img src="assets/images/icons/imagens/beijaflor.png" alt="beijaflor" class="profile-image">
             <h1>Hotel Beija Flor</h1>
-
             <span class="suites-button">Súites</span>
             <span class="lazer-button">Lazer</span>
             <span class="gastronomia-button">Gastronomia</span>
             <span class="avaliacao-button">Avaliação</span>
-
         </div>
+
         <div class="buttons">
             <button onclick="window.location.href='entrar.html'" class="entrar-button">Entrar</button>
             <button onclick="window.location.href='cadastro.html'" class="cadastro-button">Cadastre-se</button>
-
         </div>
     </div>
 
@@ -42,138 +31,112 @@
             <p>Bem-vindo ao Beija-Flor Hotel, um refúgio de tranquilidade e conforto no coração. 
                 Oferecemos acomodações acolhedoras, serviços simpáticos e uma experiência única para tornar sua estadia inesquecível. 
                 Venha desfrutar do melhor que temos a oferecer.</p>
-            <button onclick="showSection('reserva')" class="reserva-button"><a href="cadastro.html" class="reserva-button">Faça sua reserva</a>
-            </button>    
+            <a href="cadastro.html" class="reserva-button">Faça sua reserva</a>
         </div>
     </div>
 
-    <div class="suitis">
-        <img src="assets/images/icons/imagens/suitis.png" alt="suitis" class="image">
-    </div>
+<div id="suitis" class="section">
+    <img src="assets/images/icons/imagens/suitis.png" alt="Súites" class="image">
+</div>
 
-    <div class="servicos">
-        <img src="assets/images/icons/imagens/servicos adicionais.png" alt="servicos" class="image">
-    </div>
+<div id="servicos" class="section">
+    <img src="assets/images/icons/imagens/servicos adicionais.png" alt="Serviços" class="image">
+</div>
 
-    <div class="restaurante">
-        <img src="assets/images/icons/imagens/restaurante.png" alt="restaurante" class="image">
-    </div>
+<div id="restaurante" class="section">
+    <img src="assets/images/icons/imagens/restaurante.png" alt="Restaurante" class="image">
+</div>
 
     <script>
-        // Função para adicionar evento de clique e rolar até a seção correspondente
-        const scrollToSection = (buttonClass, targetId) => {
-            const button = document.querySelector(buttonClass);
-            const target = document.getElementById(targetId);
+       document.addEventListener('DOMContentLoaded', () => {
+    const scrollToSection = (buttonClass, targetId) => {
+        const button = document.querySelector(buttonClass);
+        const target = document.getElementById(targetId);
 
-            button.addEventListener('click', () => {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        button.addEventListener('click', () => {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    };
+    
+    scrollToSection('.suites-button', 'suitis');
+    scrollToSection('.lazer-button', 'servicos');
+    scrollToSection('.gastronomia-button', 'restaurante');
+    scrollToSection('.avaliacao-button', 'avaliacao');
+});
+
+    </script>
+
+    <section id="avaliacao" class="reviews-section section">
+        <h2 class="reviews-title">AVALIAÇÕES</h2>
+        <div class="carousel-container">
+            <button class="carousel-button prev">&#10094;</button>
+            <div class="carousel-slide">
+                <div class="review-card">
+                    <p>Uma estadia incrível! O atendimento foi excepcional e a localização, perfeita. Voltarei com certeza!</p>
+                    <div class="reviewer">
+                        <img src="assets/images/icons/imagens/hospede2.jpg" alt="Foto de Djavan">
+                        <div><strong>Djavan</strong></div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <p>Conforto e limpeza impecáveis, com um café da manhã delicioso. Voltarei com certeza!</p>
+                    <div class="reviewer">
+                        <img src="assets/images/icons/imagens/hospede4.jpg" alt="Foto de Paulo">
+                        <div><strong>Paulo Ricardo</strong></div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <p>Serviço cordial e atencioso, fizeram minha experiência ainda mais especial. Recomendo!</p>
+                    <div class="reviewer">
+                        <img src="assets/images/icons/imagens/hospede1.jpg" alt="Foto de Diego">
+                        <div><strong>Diego Paes</strong></div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <p>A equipe deste hotel foi extremamente acolhedora e prestativa durante toda a nossa estadia.</p>
+                    <div class="reviewer">
+                        <img src="assets/images/icons/imagens/hospede3.jpg" alt="Foto de Jader">
+                        <div><strong>Jader Adriel</strong></div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-button next">&#10095;</button>
+        </div>
+    </section>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slide = document.querySelector('.carousel-slide');
+            const prevButton = document.querySelector('.carousel-button.prev');
+            const nextButton = document.querySelector('.carousel-button.next');
+            const reviewCards = document.querySelectorAll('.review-card');
+            const cardWidth = reviewCards[0].offsetWidth;
+            let currentIndex = 0;
+    
+            const updateSlidePosition = () => {
+                slide.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+            };
+    
+            prevButton.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateSlidePosition();
+                }
             });
-        };
-
-        // Associa os botões às suas respectivas seções
-        scrollToSection('.suites-button', 'suitis');
-        scrollToSection('.lazer-button', 'servicos');
-        scrollToSection('.gastronomia-button', 'restaurante');
+    
+            nextButton.addEventListener('click', () => {
+                if (currentIndex < reviewCards.length - 1) {
+                    currentIndex++;
+                    updateSlidePosition();
+                }
+            });
+    
+           
+            window.addEventListener('resize', () => {
+                slide.style.transition = 'none';
+                updateSlidePosition();
+                slide.style.transition = '';
+            });
+        });
     </script>
     
-    <div id="entrar" class="section">
-        <h2>Login</h2>
-        <form>
-            <label for="login-username">Usuário:</label><br>
-            <input type="text" id="login-username" name="username" required><br><br>
-            <label for="login-password">Senha:</label><br>
-            <input type="password" id="login-password" name="password" required><br><br>
-            <button type="submit">
-                <a href="entrar.html">Entrar</a>
-            </button>
-        </form>
-        <button onclick="showSection('home')">Voltar</button>
-    </div>
-
-    <div id="cadastro" class="section">
-        <h2>Cadastro</h2>
-        <form>
-            <label for="cadastro-username">Usuário:</label><br>
-            <input type="text" id="cadastro-username" name="username" required><br><br>
-            <label for="cadastro-email">E-mail:</label><br>
-            <input type="email" id="cadastro-email" name="email" required><br><br>
-            <label for="cadastro-password">Senha:</label><br>
-            <input type="password" id="cadastro-password" name="password" required><br><br>
-            <button type="submit">Cadastrar</button>
-        </form>
-        <button onclick="showSection('home')">Voltar</button>
-    </div>
- 
-   <section class="reviews-section">
-    <h2 class="reviews-title">AVALIAÇÕES</h2>
-    <div class="carousel-container">
-        <button class="carousel-button prev">&#10094;</button>
-        
-        <div class="carousel-slide">
-            <div class="review-card">
-                <p>Uma estadia incrível! O atendimento foi excepcional e a localização, perfeita. Voltarei com certeza!</p>
-                <div class="reviewer">
-                    <img src="assets/images/icons/imagens/hospede2.jpg" alt="Foto de Djavan">
-                    <div>
-                        <strong>Djavan</strong>
-                    </div>
-                </div>
-            </div>
-            <div class="review-card">
-                <p>Conforto e limpeza impecáveis, com um café da manhã delicioso. Voltarei com certeza!</p>
-                <div class="reviewer">
-                    <img src="assets/images/icons/imagens/hospede4.jpg" alt="Foto de Paulo">
-                    <div>
-                        <strong>Paulo Ricardo</strong>
-                    </div>
-                </div>
-            </div>
-            <div class="review-card">
-                <p>Serviço cordial e atencioso, fizeram minha experiência ainda mais especial. Recomendo!</p>
-                <div class="reviewer">
-                    <img src="assets/images/icons/imagens/hospede1.jpg" alt="Foto de Diego">
-                    <div>
-                        <strong>Diego Paes</strong>
-                    </div>
-                </div>
-            </div>
-            <div class="review-card">
-                <p>A equipe deste hotel foi extremamente acolhedora e prestativa durante toda a nossa estadia</p>
-                <div class="reviewer">
-                    <img src="assets/images/icons/imagens/hospede3.jpg" alt="Foto de Jader">
-                    <div>
-                        <strong>Jader Adriel</strong>
-                    </div>
-                </div>
-            </div>
-            <div class="review-card">
-                <p>Comida saboroza, ambiente confortavel e com muitos lugares ecolôgicos.</p>
-                <div class="reviewer">
-                    <img src="assets/images/icons/imagens/hospede5.jpg" alt="Foto de Savio">
-                    <div>
-                        <strong>Sávio Kauan</strong>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    <script>
-        // Função para exibir as seções
-        function showSection(sectionId) {
-
-            // Esconde todas as seções
-            document.querySelectorAll('.section').forEach(function(section) {
-                section.classList.remove('active');
-            });
-
-            // Mostra a seção escolhida
-            document.getElementById(sectionId).classList.add('active');
-        }
-
-        // Inicializa a página com a seção inicial
-        window.onload = function() {
-            showSection('home');
-        };
-    </script>
-</body>
-</html>
