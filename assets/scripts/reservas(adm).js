@@ -95,6 +95,9 @@ elements.forEach(element => {
         img.addEventListener("click", removerLinha);
 		
 		modal.style.display = 'none';
+		const div = document.querySelector('.modal'); 
+
+        const elements = div.querySelectorAll('input, textarea');
 	}else{
 		alert('Por favor preencha todos os formulários.');
 	}	
@@ -144,7 +147,6 @@ elements.forEach(element => {
             }
         }
 
-        // Adicionando eventos aos inputs
         document.getElementById("filtro-search").addEventListener("input", filtrarTabela);
         document.getElementById("check-in").addEventListener("input", filtrarTabela);
         document.getElementById("check-out").addEventListener("input", filtrarTabela);
