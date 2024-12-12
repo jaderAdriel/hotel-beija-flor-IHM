@@ -246,12 +246,33 @@ button, input{
 	}
 .container-table{
 	display: flex;
-
+    width: 100%;	
+	
 	table{
 		display: flex;
-	    gap: 8px;
+		font-family: "Noto Sans";
+		font-size: 12px;
+		width: 100%;
+		border-spacing: 48px 0;
+		border-collapse: separate;
+		
+		tr{
+			  transform: translateX(-30px);
+		}
+        th, td {
+    white-space: nowrap; 
+    text-align: center;
+  }
+          th span, td span{
+    white-space: nowrap; 
+    text-align: center;
+	margin-right: 10px;
+  }
+  th span:last-child, td span:last-child {
+    margin-right: 0; 
+  }
 	}
-	}
+	}  
 
 
 .modal{ 
@@ -415,7 +436,7 @@ button, input{
             justify-content: flex-start; 
             margin-bottom: 40px;
 	}
-	.modal-form-column{
+	.modal-form-column{ 
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
@@ -429,14 +450,17 @@ button, input{
 		.booking-info{
 		display: flex;
 	    border: 1px solid #B9C1D0;
-    	border-radius: 6px;
-	    background-color: transparent;   
+    	border-radius: 6px;  
 	    width: 210px;
 	    height:32px;    
     	align-items: center;
+		#subtotal, #daily, #total{
+			background-color: black;
+		}
 		}
 	}
 }
+
 .modal-footer{
 	display: flex;
 	gap: 1em;
