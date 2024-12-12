@@ -17,6 +17,7 @@ ol, ul {
 
 a {
     text-decoration: none;
+    font-weight: normal;
 }
 
 html, body, #main-wrapper {
@@ -103,11 +104,13 @@ img.min-icon {
         justify-content: space-between;
     }
 
-    header {
+    
+
+    header a {
         display: flex;
+        flex-direction: row;
         align-items: center;
         height: 5em;
-        gap: 0.2em;
         h1 {
             font-size: 1.3em;
             color: var(--c-secondary);

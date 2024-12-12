@@ -153,14 +153,7 @@ input {
     background-color: #00001f;
     transform: scale(1.1);
 }
-.logo-tittle{
-    display: flex;
-}
-.logo-tittle h1{
-    margin-left: 3%;
-    color: #000042;
-    font-size: 21px;
-}
+
 
 
 
