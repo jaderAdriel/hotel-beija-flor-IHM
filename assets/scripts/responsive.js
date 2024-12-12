@@ -21,26 +21,44 @@ const showNavBar = () => {
 }
 
 
+const modalWrapper = document.getElementById("modal-wrapper");
+modalWrapper.style.display = "none";
 
-const modal = document.getElementById("modal-wrapper");
-modal.style.display = "none";
-
-const showModalButtons = document.querySelectorAll(".roomGuest-item .action.available");
-
+const showModalButtons = document.querySelectorAll(".roomGuest-item .action");
 
 showModalButtons.forEach((element) => {
     element.addEventListener('click', () => {
-        modal.style.display = "flex";
+        let modalId;
+        if (element.classList.contains('available')) {
+            modalId = "checkin-modal";
+        } else {
+            modalId = "checkout-modal";
+        }
+        
+        openModal(modalId);
+        mapCloseButtons(modalId);
     });
-})
+});
 
-const cancelModalButtons= document.querySelectorAll("#modal-wrapper .close-icon");
+const mapCloseButtons = (modalId) => {
+    const modal = document.getElementById(modalId);
+    const closeButtons = modal.querySelectorAll(".close-icon, .action");
 
-
-cancelModalButtons.forEach((element) => {
-    element.addEventListener('click', () => {
-        modal.style.display = "none";
+    closeButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            closeModal(modalId);
+        });
     });
-})
+};
 
+const closeModal = (modalId) => {
+    const modal = document.getElementById(modalId);
+    modal.style.display = "none";
+    modalWrapper.style.display = "none";
+};
 
+const openModal = (modalId) => {
+    const modal = document.getElementById(modalId);
+    modal.style.display = "flex";
+    modalWrapper.style.display = "flex";
+};

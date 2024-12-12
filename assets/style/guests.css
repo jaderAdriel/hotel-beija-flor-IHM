@@ -60,39 +60,37 @@ main > section {
 #roomGuest-list {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(auto-fit, min(100%, 18rem));
+    grid-template-columns: repeat(auto-fit, min(100%, 15rem));
     gap: 1rem; 
     row-gap: 1em;
     column-gap: 1rem;
 }
 
 .roomGuest-item {
-    max-width: 20rem;
+    /* max-width: 20rem; */
 }
 
 .roomGuest-item article {
     width: 100%;
-    display: flex;
-    flex-direction: column;
     padding: 1em;
     border-radius: 5px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
     > header {
+        width: 100%;
         display: flex;
-        /* gap: 1em;  */
+        flex-direction: row;
         justify-content: space-between;
-        /* align-items: center; */
-        /* justify-content: center; */
+
         .status-wrapper {
             display: flex;
-            gap: 1em; 
-            justify-content: space-between;
+            gap: 1em;
+            width: fit-content;
             align-items: center;
         }
-        > .menu-button {
+        .menu-button {
+            width: fit-content;
             background-color: transparent;
-
         }
     }
 
@@ -105,6 +103,7 @@ main > section {
         display: flex;
         gap: 0.5em;
         .action {
+            cursor: pointer;
             flex-grow: 1;
             padding: 0.5rem;
             border-radius: 5px;
@@ -154,7 +153,6 @@ main > section {
     }
 
     .roomGuest-item article > header {
-        flex-direction: column;
         gap: 0.5em;
     }
 }
@@ -166,18 +164,29 @@ main > section {
     min-height: 100vh;
     height: 100%;
     top: 0;
+    display: none;
     background-color: #0000005e;
-    display: flex;
     justify-content: center;
     align-items: center;
+
+    &.opened {
+        display: flex;
+    }
 }
 
-#checkout-modal {
-    display: flex;
+.modal {
+    display: none;
+    &.opened {
+        display: flex;
+    }
+}
+
+#checkout-modal, .modal {
+    display: none;
     gap: 1em;
     flex-direction: column;
     padding: 2em;
-    width: min(40em, 100%);
+    width: min(50em, 100%);
     background-color: #FFF;
     border-radius: 5px;
 
@@ -209,7 +218,14 @@ main > section {
         padding: 0.5em;
         border: 2px solid #66708575;
         border-radius: 6px;
+        &:not([value=""]) {
+        }
     }
+
+    input[value]:not([value=""]) {
+        background-color: #a4aab675;
+    }
+    
     label {
         color: #667085;
     }
@@ -259,7 +275,8 @@ main > section {
                 margin-left: 0.5em;
                 background-color: #FFF;
                 font-size: small;
-                padding: 0.2em;
+                padding: 0 0.3em;
+                width: fit-content;
             }
         }
 
@@ -271,6 +288,7 @@ main > section {
         gap: 1em;
         .action {
             display: flex;
+            cursor: pointer;
             align-items: center;
             justify-content: center;
             padding: 1em;
