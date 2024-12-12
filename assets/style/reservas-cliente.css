@@ -1,3 +1,5 @@
+
+/* cabeçalho */
 .room-tittle{
     text-align: left;
     font-size: 2em;
@@ -5,6 +7,80 @@
 }
 
 
+/* buscar */
+       
+.search-container{
+    display: flex; 
+    justify-content: flex-start; 
+    width: 20%; 
+    margin-bottom: 20px;
+
+}
+
+.search-input {
+    width: 100%;
+    min-width: 150px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    transition: border-color 0.3s ease;
+    border-color: #E2B25D;
+    margin-left: 0;
+    outline: none;
+}
+
+.search-input:focus {
+    border-color: #000042;  
+}
+
+/* Estilos dos fieldsets */
+
+.fild-container {
+    gap: 20px;
+    max-width: 250px; 
+    box-sizing: border-box; 
+ } 
+
+ .form-div{
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.check:hover {
+    color: #E2B25D;
+}
+
+
+fieldset {
+    padding: 10px;
+    border: 2px solid #E2B25D;
+    border-radius: 2px;
+    background-color: #f9f9f9;
+    
+}
+
+
+legend {
+    font-size: 2vh;
+    font-weight: bold;
+    color: black;
+    padding: 0 10px;
+    
+    
+}
+
+
+input {
+    font-size: 14px;
+    border: 0px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+/* quartos */
 .room-container {
     display: grid;
     width: 100%;
@@ -60,6 +136,7 @@
     margin-bottom: 15px;
 }
 
+/* botao reservar*/
 .reserve-button {
     background-color: #000042;
     color: #E2B25D;
@@ -85,84 +162,10 @@
     font-size: 21px;
 }
 
-/* formulario */
-
- /* Estilos para os formulários */
- .fild-container {
-    gap: 20px;
-    max-width: 250px; 
-    box-sizing: border-box; /* Inclui padding e borda na largura */
-    flex: 1 1 250px;
- } 
-
-/* Estilos do fieldset */
-fieldset {
-    padding: 10px;
-    border: 2px solid #E2B25D;
-    border-radius: 2px;
-    background-color: #f9f9f9;
-    
-}
-
-/* Estilos do legend */
-legend {
-    font-size: 2vh;
-    font-weight: bold;
-    color: black;
-    padding: 0 10px;
-    
-    
-}
 
 
-/* Estilos dos inputs */
-input {
-    font-size: 14px;
-    border: 0px;
-    width: 90%;
-    margin-left: 5%;
-}
 
 
-.form-div{
-    display: flex; /* Ativa o Flexbox */
-    flex-wrap: wrap; /* Permite que os elementos quebrem linha automaticamente */
-    gap: 20px; /* Espaçamento entre os elementos */
-    justify-content: flex-start;
-}
-
-.check:hover {
-    color: #E2B25D;
-}
-
-       
-.search-container{
-    display: flex; /* Ativa Flexbox */
-    justify-content: flex-start; /* Alinha o input à esquerda */
-    width: 20%; /* Ocupa toda a largura disponível */
-    margin-bottom: 20px; /* Espaço inferior */
-
-}
-
-.search-input {
-    width: 100%;
-    min-width: 150px;
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 3px;
-    transition: border-color 0.3s ease;
-    border-color: #E2B25D;
-    margin-left: 0;
-    outline: none;
-}
-
-.search-input:focus {
-    border-color: #000042;  /* Cor ao focar no campo */
-}
-h1{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
 
 
 
